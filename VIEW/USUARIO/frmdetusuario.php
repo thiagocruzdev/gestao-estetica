@@ -15,19 +15,24 @@ $usuario = $dalUsuario->SelectById($id);
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/lpphpadst126/view/css/style.css">
     <meta charset="UTF-8"><title>Detalhes do Usuário</title>
 </head>
 <body class="pink lighten-5">
-    <div class="container card-panel">
-        <h4 class="center pink darken-1 white-text card-panel">Detalhes do Usuário</h4>
-        <p><strong>ID:</strong> <?php echo $usuario->getId(); ?></p>
-        <p><strong>Login:</strong> <?php echo $usuario->getLogin(); ?></p>
-        <p><strong>Nome:</strong> <?php echo $usuario->getNome(); ?></p>
-        <p><strong>Nível:</strong> <?php echo ucfirst($usuario->getNivel()); ?></p>
-        <div class="center">
-            <a class="btn grey" href="lstusuario.php">Voltar</a>
-            <a class="btn orange" href="frmedtusuario.php?id=<?php echo $usuario->getId(); ?>">Editar</a>
-            <a class="btn red" onclick="remover(<?php echo $usuario->getId(); ?>)">Excluir</a>
+    <div class="pagina-formulario">
+        <div class="card-formulario card-panel">
+            <h4 class="center pink darken-1 white-text titulo-formulario">Detalhes do Usuário</h4>
+            <div class="detalhes-conteudo">
+                <p><strong>ID:</strong> <?php echo $usuario->getId(); ?></p>
+                <p><strong>Login:</strong> <?php echo $usuario->getLogin(); ?></p>
+                <p><strong>Nome:</strong> <?php echo $usuario->getNome(); ?></p>
+                <p><strong>Nível:</strong> <?php echo ucfirst($usuario->getNivel()); ?></p>
+            </div>
+            <div class="acoes-formulario">
+                <a class="btn grey" href="lstusuario.php">Voltar</a>
+                <a class="btn orange" href="frmedtusuario.php?id=<?php echo $usuario->getId(); ?>">Editar</a>
+                <a class="btn red" onclick="remover(<?php echo $usuario->getId(); ?>)">Excluir</a>
+            </div>
         </div>
     </div>
 </body>

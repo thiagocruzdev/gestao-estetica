@@ -94,3 +94,48 @@ table thead.pink.lighten-3 {
 body.pink.lighten-5 {
   padding-top: 56px;
 }
+
+.pagina-formulario {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 56px);
+  padding: 24px 16px;
+  box-sizing: border-box;
+}
+
+.card-formulario {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.card-formulario-largo {
+  max-width: 720px;
+}
+
+.card-formulario .titulo-formulario {
+  margin: -24px -24px 20px;
+  padding: 16px;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-formulario .detalhes-conteudo {
+  text-align: center;
+}
+
+.card-formulario .detalhes-conteudo p {
+  margin: 10px 0;
+  font-size: 1.05rem;
+}
+
+.card-formulario .acoes-formulario {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.card-formulario .subtitulo-formulario {
+  text-align: center;
+  margin: 16px 0;
+}

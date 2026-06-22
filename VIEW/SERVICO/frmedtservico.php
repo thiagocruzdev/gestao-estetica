@@ -16,7 +16,6 @@ $lstCliente = $dalCliente->Select();
     <link rel="stylesheet" href="/lpphpadst126/view/css/style.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="/lpphpadst126/view/js/init.js"></script>
     <meta charset="UTF-8"><title>Editar Serviço</title>
 </head>

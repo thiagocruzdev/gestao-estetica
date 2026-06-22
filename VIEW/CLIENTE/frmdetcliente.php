@@ -12,7 +12,6 @@ $cliente = $dalCliente->SelectById($id);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/lpphpadst126/view/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="UTF-8"><title>Detalhes do Cliente</title>
 </head>
 <body class="pink lighten-5">

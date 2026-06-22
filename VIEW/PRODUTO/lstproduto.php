@@ -10,7 +10,6 @@ $lstProduto = $dalProduto->Select();
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="UTF-8"><title>Produtos</title>
 </head>
 <body class="pink lighten-5">
@@ -20,7 +19,7 @@ $lstProduto = $dalProduto->Select();
             <thead class="pink lighten-3">
                 <tr>
                     <th>ID</th><th>Descrição</th><th>Estoque</th><th>Valor Unit.</th>
-                    <th><a class="btn-floating pink darken-2"><i class="material-icons" onclick="location.href='frminsproduto.php'">add</i></a></th>
+                    <th><a class="btn pink darken-1 btn-small" href="frminsproduto.php">Novo</a></th>
                 </tr>
             </thead>
             <tbody>
@@ -31,9 +30,9 @@ $lstProduto = $dalProduto->Select();
                     <td><?php echo $produto->getQuantidade(); ?></td>
                     <td>R$ <?php echo number_format($produto->getValor(), 2, ',', '.'); ?></td>
                     <td>
-                        <a class="btn-floating orange"><i class="material-icons" onclick="location.href='frmedtproduto.php?id=<?php echo $produto->getId(); ?>'">edit</i></a>
-                        <a class="btn-floating blue"><i class="material-icons" onclick="location.href='frmdetproduto.php?id=<?php echo $produto->getId(); ?>'">visibility</i></a>
-                        <a class="btn-floating red"><i class="material-icons" onclick="remover(<?php echo $produto->getId(); ?>)">delete</i></a>
+                        <a class="btn orange btn-small" href="frmedtproduto.php?id=<?php echo $produto->getId(); ?>">Editar</a>
+                        <a class="btn blue btn-small" href="frmdetproduto.php?id=<?php echo $produto->getId(); ?>">Detalhes</a>
+                        <a class="btn red btn-small" onclick="remover(<?php echo $produto->getId(); ?>)">Excluir</a>
                     </td>
                 </tr>
             <?php } ?>

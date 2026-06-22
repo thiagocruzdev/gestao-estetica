@@ -15,7 +15,6 @@ $lstProduto = $dalProduto->Select();
     <link rel="stylesheet" href="/lpphpadst126/view/css/style.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="/lpphpadst126/view/js/init.js"></script>
     <meta charset="UTF-8"><title>Inserir Serviço</title>
 </head>
@@ -85,7 +84,7 @@ $lstProduto = $dalProduto->Select();
                 </div>
 
                 <div class="acoes-formulario col s12">
-                    <button class="btn pink darken-1" type="submit">Salvar <i class="material-icons right">save</i></button>
+                    <button class="btn pink darken-1" type="submit">Salvar</button>
                 </div>
             </form>
         </div>

@@ -18,7 +18,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/lpphpadst126/view/menu.php";
             <div class="col s12 m4">
                 <div class="card pink lighten-4 hoverable">
                     <div class="card-content pink-text text-darken-3">
-                        <i class="material-icons medium">people</i>
                         <h5>Clientes</h5>
                         <p>Cadastro e consulta de clientes</p>
                     </div>
@@ -30,7 +29,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/lpphpadst126/view/menu.php";
             <div class="col s12 m4">
                 <div class="card pink lighten-4 hoverable">
                     <div class="card-content pink-text text-darken-3">
-                        <i class="material-icons medium">inventory</i>
                         <h5>Produtos</h5>
                         <p>Controle de estoque de produtos</p>
                     </div>
@@ -42,7 +40,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/lpphpadst126/view/menu.php";
             <div class="col s12 m4">
                 <div class="card pink lighten-4 hoverable">
                     <div class="card-content pink-text text-darken-3">
-                        <i class="material-icons medium">content_cut</i>
                         <h5>Serviços</h5>
                         <p>Registro de serviços e produtos usados</p>
                     </div>

@@ -10,7 +10,6 @@ $lstServico = $dalServico->Select();
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="UTF-8"><title>Serviços</title>
 </head>
 <body class="pink lighten-5">
@@ -20,7 +19,7 @@ $lstServico = $dalServico->Select();
             <thead class="pink lighten-3">
                 <tr>
                     <th>ID</th><th>Cliente</th><th>Descrição</th><th>Data</th><th>Valor</th>
-                    <th><a class="btn-floating pink darken-2"><i class="material-icons" onclick="location.href='frminsservico.php'">add</i></a></th>
+                    <th><a class="btn pink darken-1 btn-small" href="frminsservico.php">Novo</a></th>
                 </tr>
             </thead>
             <tbody>
@@ -32,9 +31,9 @@ $lstServico = $dalServico->Select();
                     <td><?php echo date('d/m/Y', strtotime($servico->getDataServico())); ?></td>
                     <td>R$ <?php echo number_format($servico->getValor(), 2, ',', '.'); ?></td>
                     <td>
-                        <a class="btn-floating orange"><i class="material-icons" onclick="location.href='frmedtservico.php?id=<?php echo $servico->getId(); ?>'">edit</i></a>
-                        <a class="btn-floating blue"><i class="material-icons" onclick="location.href='frmdetservico.php?id=<?php echo $servico->getId(); ?>'">visibility</i></a>
-                        <a class="btn-floating red"><i class="material-icons" onclick="remover(<?php echo $servico->getId(); ?>)">delete</i></a>
+                        <a class="btn orange btn-small" href="frmedtservico.php?id=<?php echo $servico->getId(); ?>">Editar</a>
+                        <a class="btn blue btn-small" href="frmdetservico.php?id=<?php echo $servico->getId(); ?>">Detalhes</a>
+                        <a class="btn red btn-small" onclick="remover(<?php echo $servico->getId(); ?>)">Excluir</a>
                     </td>
                 </tr>
             <?php } ?>

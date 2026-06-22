@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="icon" href="/lpphpadst126/images/logo.jpeg">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Login - Clínica Estética</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/lpphpadst126/view/css/style.css">
@@ -27,12 +26,10 @@
                 ?>
                 <form method="POST" action="login.php">
                     <div class="input-field">
-                        <i class="material-icons iconis prefix pink-text">account_box</i>
                         <input id="icon_prefix" type="text" name="usuario" class="validate" required>
                         <label for="icon_prefix">Usuário</label>
                     </div>
                     <div class="input-field">
-                        <i class="material-icons iconis prefix pink-text">lock</i>
                         <input id="password" type="password" name="password" class="validate" required>
                         <label for="password">Senha</label>
                     </div>

@@ -15,7 +15,6 @@ $lstUsuario = $dalUsuario->Select();
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="UTF-8"><title>Usuários</title>
 </head>
 <body class="pink lighten-5">
@@ -25,7 +24,7 @@ $lstUsuario = $dalUsuario->Select();
             <thead class="pink lighten-3">
                 <tr>
                     <th>ID</th><th>Login</th><th>Nome</th><th>Nível</th>
-                    <th><a class="btn-floating pink darken-2"><i class="material-icons" onclick="location.href='frminsusuario.php'">add</i></a></th>
+                    <th><a class="btn pink darken-1 btn-small" href="frminsusuario.php">Novo</a></th>
                 </tr>
             </thead>
             <tbody>
@@ -36,9 +35,9 @@ $lstUsuario = $dalUsuario->Select();
                     <td><?php echo $usuario->getNome(); ?></td>
                     <td><?php echo ucfirst($usuario->getNivel()); ?></td>
                     <td>
-                        <a class="btn-floating orange"><i class="material-icons" onclick="location.href='frmedtusuario.php?id=<?php echo $usuario->getId(); ?>'">edit</i></a>
-                        <a class="btn-floating blue"><i class="material-icons" onclick="location.href='frmdetusuario.php?id=<?php echo $usuario->getId(); ?>'">visibility</i></a>
-                        <a class="btn-floating red"><i class="material-icons" onclick="remover(<?php echo $usuario->getId(); ?>)">delete</i></a>
+                        <a class="btn orange btn-small" href="frmedtusuario.php?id=<?php echo $usuario->getId(); ?>">Editar</a>
+                        <a class="btn blue btn-small" href="frmdetusuario.php?id=<?php echo $usuario->getId(); ?>">Detalhes</a>
+                        <a class="btn red btn-small" onclick="remover(<?php echo $usuario->getId(); ?>)">Excluir</a>
                     </td>
                 </tr>
             <?php } ?>

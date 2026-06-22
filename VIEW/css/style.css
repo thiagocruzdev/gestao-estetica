@@ -80,8 +80,7 @@ footer .foot-text {
 }
 
 i.iconis {
-  font-size: 1em !important;
-  margin-top: 8px;
+  display: none;
 }
 
 .login {
@@ -113,10 +112,6 @@ table thead.pink.lighten-3 {
 
 #slide-out.sidenav {
   width: 280px;
-}
-
-#slide-out.sidenav li > a > i.material-icons {
-  margin-right: 12px;
 }
 
 #slide-out .user-view .sidenav-close {

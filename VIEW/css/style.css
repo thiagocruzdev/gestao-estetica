@@ -9,6 +9,46 @@ main {
   flex: 1 0 auto;
 }
 
+.login-body {
+  background-color: #fce4ec;
+}
+
+.login-pagina {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 50px);
+  padding: 32px 16px;
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
+  box-sizing: border-box;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 28px 24px 24px;
+  border-radius: 12px;
+}
+
+.login-titulo {
+  text-align: center;
+  margin: 0 0 20px;
+  font-weight: 500;
+}
+
+.login-erro {
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+.login-acoes {
+  text-align: center;
+  margin-top: 8px;
+}
+
 .login-logo {
   width: 220px;
   max-width: 90%;
@@ -46,11 +86,13 @@ i.iconis {
 
 .login {
   border: 1px solid #f48fb1;
-  width: 80%;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 20px;
+  width: 100%;
+  margin: 16px auto 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 24px 20px;
   border-radius: 8px;
+  text-align: left;
+  box-sizing: border-box;
 }
 
 .btn.pink.darken-1 {

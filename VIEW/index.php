@@ -10,47 +10,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/lpphpadst126/view/css/style.css">
 </head>
-<body>
-    <div class="had-container">
-        <div class="parallax-container logueo pink lighten-5">
-            <div class="row"><br>
-                <div class="col m8 s10 offset-m2 offset-s1 center">
-                    <h4 class="truncate bg-card-user">
-                        <img src="/lpphpadst126/images/logo.jpeg" alt="Renata Faveri Beauty & Academy" class="login-logo">
-                        <div class="row login">
-                            <h5 class="pink-text text-darken-3">Controle de Acesso</h5>
-                            <?php
-                            session_start();
-                            if (!empty($_SESSION['erro_login'])) {
-                                echo '<p class="red-text center">' . htmlspecialchars($_SESSION['erro_login']) . '</p>';
-                                unset($_SESSION['erro_login']);
-                            }
-                            ?>
-                            <form class="col s12" method="POST" action="login.php">
-                                <div class="row">
-                                    <div class="input-field col m12 s12">
-                                        <i class="material-icons iconis prefix pink-text">account_box</i>
-                                        <input id="icon_prefix" type="text" name="usuario" class="validate" required>
-                                        <label for="icon_prefix">Usuário</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col m12 s12">
-                                        <i class="material-icons iconis prefix pink-text">lock</i>
-                                        <input id="password" type="password" name="password" class="validate" required>
-                                        <label for="password">Senha</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <button class="btn pink darken-1 waves-effect waves-light" type="submit">Acessar</button>
-                                </div>
-                            </form>
-                        </div>
-                    </h4>
-                </div>
+<body class="login-body">
+    <main class="login-pagina pink lighten-5">
+        <div class="login-card bg-card-user">
+            <img src="/lpphpadst126/images/logo.jpeg" alt="Renata Faveri Beauty & Academy" class="login-logo">
+            <div class="login">
+                <h5 class="login-titulo pink-text text-darken-3">Controle de Acesso</h5>
+                <?php
+                if (session_status() === PHP_SESSION_NONE) {
+                    session_start();
+                }
+                if (!empty($_SESSION['erro_login'])) {
+                    echo '<p class="red-text login-erro">' . htmlspecialchars($_SESSION['erro_login']) . '</p>';
+                    unset($_SESSION['erro_login']);
+                }
+                ?>
+                <form method="POST" action="login.php">
+                    <div class="input-field">
+                        <i class="material-icons iconis prefix pink-text">account_box</i>
+                        <input id="icon_prefix" type="text" name="usuario" class="validate" required>
+                        <label for="icon_prefix">Usuário</label>
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons iconis prefix pink-text">lock</i>
+                        <input id="password" type="password" name="password" class="validate" required>
+                        <label for="password">Senha</label>
+                    </div>
+                    <div class="login-acoes">
+                        <button class="btn pink darken-1 waves-effect waves-light" type="submit">Acessar</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
+    </main>
 
     <footer class="page-footer pink lighten-3">
         <div class="footer-copyright">

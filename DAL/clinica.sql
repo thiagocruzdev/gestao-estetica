@@ -1,8 +1,4 @@
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-CREATE DATABASE IF NOT EXISTS `clinica` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE IF NOT EXISTS `clinica`;
 USE `clinica`;
 
 DROP TABLE IF EXISTS `servico_produto`;
@@ -18,7 +14,7 @@ CREATE TABLE `usuario` (
   `nome` varchar(50) NOT NULL,
   `nivel` enum('admin','funcionario') NOT NULL DEFAULT 'funcionario',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 INSERT INTO `usuario` (`login`, `senha`, `nome`, `nivel`) VALUES
 ('admin', '202cb962ac59075b964b07152d234b70', 'Administrador', 'admin'),
@@ -31,7 +27,7 @@ CREATE TABLE `cliente` (
   `email` varchar(50) DEFAULT NULL,
   `cpf` varchar(14) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 INSERT INTO `cliente` (`nome`, `telefone`, `email`, `cpf`) VALUES
 ('Ana Paula Souza', '(11) 98765-4321', 'ana@email.com', '123.456.789-00'),
@@ -43,7 +39,7 @@ CREATE TABLE `produto` (
   `quantidade` float NOT NULL DEFAULT 0,
   `valor` float NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 INSERT INTO `produto` (`descricao`, `quantidade`, `valor`) VALUES
 ('Acido Hialuronico 1ml', 20, 150.00),
@@ -59,7 +55,7 @@ CREATE TABLE `servico` (
   PRIMARY KEY (`id`),
   KEY `servico_cliente` (`cliente`),
   CONSTRAINT `servico_cliente_fk` FOREIGN KEY (`cliente`) REFERENCES `cliente` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
 
 CREATE TABLE `servico_produto` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -71,6 +67,4 @@ CREATE TABLE `servico_produto` (
   KEY `sp_produto` (`produto`),
   CONSTRAINT `sp_servico_fk` FOREIGN KEY (`servico`) REFERENCES `servico` (`id`) ON DELETE CASCADE,
   CONSTRAINT `sp_produto_fk` FOREIGN KEY (`produto`) REFERENCES `produto` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-COMMIT;
+) 

@@ -1,0 +1,96 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #fce4ec;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.login-logo {
+  width: 220px;
+  max-width: 90%;
+  height: auto;
+  margin: 10px auto 15px;
+  display: block;
+  object-fit: contain;
+}
+
+.bg-card-user {
+  background: rgba(248, 187, 208, 0.6);
+  padding: 15px 0;
+  border-radius: 8px;
+}
+
+.truncate > img {
+  width: 180px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+footer .foot-text {
+  margin-top: 10px;
+}
+
+.logueo {
+  height: 650px !important;
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%) !important;
+}
+
+i.iconis {
+  font-size: 1em !important;
+  margin-top: 8px;
+}
+
+.login {
+  border: 1px solid #f48fb1;
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.btn.pink.darken-1 {
+  background-color: #d81b60 !important;
+}
+
+.card.pink.lighten-4 .card-action a {
+  color: #c2185b !important;
+}
+
+table thead.pink.lighten-3 {
+  background-color: #f8bbd0 !important;
+}
+
+.card-panel.pink.lighten-4 {
+  border-left: 4px solid #f48fb1;
+}
+
+#slide-out.sidenav {
+  width: 280px;
+}
+
+#slide-out.sidenav li > a > i.material-icons {
+  margin-right: 12px;
+}
+
+#slide-out .user-view .sidenav-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.menu-fab {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 998;
+}
+
+body.pink.lighten-5 {
+  padding-top: 56px;
+}
